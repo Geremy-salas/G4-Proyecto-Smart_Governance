@@ -14,10 +14,9 @@ Smart Governance se refiere a la aplicación de tecnologías avanzadas y datos i
   - [Combinación de BibTeX a CSV](#combinación-de-bibtex-a-csv)
   - [Unificación de Dataset](#unificación-de-dataset)
   - [Limpieza de datos](#limpieza-de-datos)
-  - [Transformaciones aplicadas](#transformaciones-aplicadas)
-
+  
 - [3. Visualizaciones](#3-visualizaciones)
-  - [Análisis Exploratorio de Datos (EDA)](#análisis-exploratorio-de-datos-eda)
+  - [Análisis Exploratorio](#análisis-exploratorio-de-datos-eda)
   - [Frecuencia de palabras clave](#frecuencia-de-palabras-clave)
 
 - [4. Modelos no supervisados empleados](#4-modelos-no-supervisados-empleados)
@@ -86,10 +85,111 @@ Smart Governance se refiere a la aplicación de tecnologías avanzadas y datos i
     combined_df.to_csv('/content/science_combined.csv', index=False)
     ```
 ### Unificación de Dataset
+- Se creó un nuevo cuaderno en Google Colab para unificar ambos conjuntos de datos en un único archivo. Para lograrlo, se ejecutó el siguiente código:
+
+   ```bash
+    import pandas as pd
+    
+    # Cargar los archivos CSV
+    df_scopus = pd.read_csv('/content/drive/MyDrive/DATOS PROTECTO SEGUNDO PARCIAL/scopus.csv')
+    df_sciencedirect = pd.read_csv('/content/drive/MyDrive/DATOS PROTECTO SEGUNDO PARCIAL/science_combined.csv')
+    
+    # Renombrar las columnas en Scopus para que sean consistentes con ScienceDirect
+    df_scopus.rename(columns={
+        'Title': 'title',
+        'Abstract': 'abstract',
+        'Author Keywords': 'Author Keywords',
+        'Index Keywords': 'Index Keywords',
+        'Source title': 'Source title',
+        'Funding Details': 'Funding Details',
+        'References': 'References',
+        'Affiliations': 'Affiliations',
+        'Correspondence Address': 'Correspondence Address',
+        'DOI': 'doi'
+    }, inplace=True)
+    
+    # Crear una columna de palabras clave combinada en Scopus
+    df_scopus['keywords'] = df_scopus['Author Keywords'].fillna('') + '; ' + df_scopus['Index Keywords'].fillna('')
+    
+    # Añadir columna 'Source' para identificar la fuente
+    df_scopus['Source'] = 'Scopus'
+    df_sciencedirect['Source'] = 'ScienceDirect'
+    
+    # Seleccionar y ajustar las columnas para el DataFrame combinado en Scopus
+    df_scopus_clean = df_scopus[['Source', 'title', 'doi', 'abstract', 'keywords', 'Year',
+                                 'Source title', 'Funding Details', 'References', 'Affiliations',
+                                 'Correspondence Address', 'Authors',
+                                 'Cited by', 'Editors', 'Publisher',
+                                 'Sponsors', 'Abbreviated Source Title', 'Document Type', 'Publication Stage']].copy()
+    
+    # Ajustar las columnas para ScienceDirect
+    columns_sciencedirect = ['doi', 'number', 'title', 'keywords', 'abstract', 'year', 'Source']
+    df_sciencedirect_clean = df_sciencedirect[columns_sciencedirect].copy()
+    df_sciencedirect_clean.rename(columns={'year': 'Year'}, inplace=True)
+    
+    # Añadir columnas faltantes en ScienceDirect como NaN
+    for col in df_scopus_clean.columns:
+        if col not in df_sciencedirect_clean.columns:
+            df_sciencedirect_clean[col] = pd.NA
+    
+    # Asegurarse de que el orden de las columnas sea consistente
+    columns = ['Source', 'title', 'doi', 'abstract', 'keywords', 'Year',
+               'Source title', 'Funding Details', 'References', 'Affiliations',
+               'Correspondence Address', 'Authors',
+               'Cited by', 'Editors', 'Publisher',
+               'Sponsors', 'Abbreviated Source Title', 'Document Type', 'Publication Stage',
+               'number']
+    
+    
+    df_sciencedirect_clean = df_sciencedirect_clean[columns]
+    
+    # Combinar los DataFrames
+    df_combined = pd.concat([df_scopus_clean, df_sciencedirect_clean], ignore_index=True, sort=False)
+
+    
+   ```
 
 ### Limpieza de datos
-
-### Transformaciones aplicadas
+- Se realizó la limpieza de datos eliminando stop words, caracteres especiales y convirtiendo el texto a minúsculas. Estos pasos aseguraron que el texto fuera uniforme y libre de elementos que pudieran interferir con el análisis. Finalmente, los datasets limpios se unificaron en un único archivo consolidado.
+ 
+   ```bash
+    import re
+    from nltk.corpus import stopwords
+    from nltk.tokenize import word_tokenize
+    
+    import nltk
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    
+    # Función para limpiar el texto
+    def clean_text(text):
+        if isinstance(text, str):
+            # Convertir a minúsculas
+            text = text.lower()
+            # Eliminar caracteres especiales
+            text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+            # Tokenizar el texto
+            words = word_tokenize(text)
+            # Eliminar stop words
+            words = [word for word in words if word not in stopwords.words('english')]
+            # Volver a unir las palabras en un solo texto
+            text = ' '.join(words)
+        return text
+    
+    
+    # Aplicar la limpieza de texto a las columnas relevantes
+    text_columns = ['title', 'abstract', 'keywords', 'Source title', 'Funding Details',
+                     'References', 'Affiliations', 'Correspondence Address',
+                     'Authors', 'Editors', 'Publisher', 'Sponsors',
+                     'Abbreviated Source Title', 'Document Type', 'Publication Stage']
+    
+    for col in text_columns:
+        if col in df_combined.columns:
+            df_combined[col] = df_combined[col].apply(clean_text)
+    
+    # Guardar el DataFrame limpio en un nuevo archivo CSV
+    df_combined.to_csv('/content/drive/MyDrive/DATOS PROTECTO SEGUNDO PARCIAL/dataset-limpio.csv', index=False)
+  ```
 
 ## 3. Visualizaciones
 ### Análisis Exploratorio
