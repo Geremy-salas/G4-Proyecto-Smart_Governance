@@ -16,9 +16,10 @@ Smart Governance se refiere a la aplicación de tecnologías avanzadas y datos i
   - [Limpieza de datos](#limpieza-de-datos)
   
 - [3. Visualizaciones](#3-visualizaciones)
-  - [Análisis Exploratorio](#análisis-exploratorio-de-datos-eda)
-  - [Frecuencia de palabras clave](#frecuencia-de-palabras-clave)
-
+  - [Análisis Exploratorio](#análisis-exploratorio)
+  - [Análisis Univariado](#análisis-univariado)
+  - [Análisis Bivariado](#análisis-bivariado)
+  
 - [4. Modelos no supervisados empleados](#4-modelos-no-supervisados-empleados)
   - [Identificación de conceptos clave](#identificación-de-conceptos-clave)
   - [Agrupación por palabras clave](#agrupación-por-palabras-clave)
@@ -421,21 +422,146 @@ El Tópico 3 parece enfocarse más en los aspectos de gobernanza y gestión de l
 ### Top 40 palabras más frecuentes
 ![image](https://github.com/user-attachments/assets/6684580e-26d4-4a90-9898-075eee77cf17)
 
+En este gráfico representa el Top de 40 palabras más frecuentes relacionado entre la Frecuencia de uso con el número de palabras encontradas, teniendo el término "smart" con mas de 14000 de palabras encontradas, siguiendo con "governance", "city", "data", "urban" entre las palabras mas encontradas.
+
 ### Distribución de Documentos en Tópicos - LDA
 ![image](https://github.com/user-attachments/assets/5b66e379-d27a-4e9a-9873-ea9290406d7f)
+
+**Modelo LDA**
+
+**Tópico 0:** Evaluación de Tecnologías y Consultoría en Redes
+* **Aspectos importantes:** Este tópico se centra en la evaluación y asesoramiento en tecnologías y redes. La mención de empresas de consultoría y tecnologías sugiere una focalización en la optimización de infraestructuras tecnológicas y la implementación de sistemas avanzados.
+
+* **Métodos usados:** Consultoría tecnológica, análisis de sistemas, implementación de sensores y redes inteligentes.
+
+* **Métricas:** Desempeño de la red, eficiencia de sistemas, tiempos de implementación.
+
+* **Entidades:** Empresas de consultoría tecnológica, proveedores de servicios de red.
+
+* **Beneficios:** Mejora en la infraestructura tecnológica, eficiencia en redes y sistemas, optimización de recursos tecnológicos.
+
+**Tópico 1:** Ciudades Inteligentes y Gestión Urbana
+
+* **Aspectos importantes:** Este tópico aborda la gestión y desarrollo de ciudades inteligentes, con un enfoque en la sostenibilidad, la calidad de vida urbana y la participación ciudadana. La tecnología y la información son cruciales para la gobernanza urbana efectiva.
+
+* **Métodos usados:** Implementación de tecnologías digitales en la gestión urbana, desarrollo de infraestructura sostenible, participación ciudadana en la toma de decisiones.
+
+* **Métricas:** Calidad de vida urbana, eficiencia en la prestación de servicios, participación ciudadana.
+
+* **Entidades:** Gobiernos locales, organizaciones urbanas, empresas de tecnología.
+
+* **Beneficios:** Mejora en la prestación de servicios urbanos, desarrollo sostenible, mayor participación y satisfacción ciudadana.
+
+**Tópico 2:** Energía Renovable y Redes Eléctricas
+
+* **Aspectos importantes:** Este tópico se enfoca en la transición hacia energías renovables y la optimización de las redes eléctricas. La eficiencia energética y la reducción de la huella de carbono son puntos clave.
+
+* **Métodos usados:** Desarrollo e integración de redes inteligentes, almacenamiento de energía, implementación de sistemas de energía renovable.
+
+* **Métricas:** Eficiencia energética, reducción de emisiones de carbono, capacidad de almacenamiento de energía.
+
+* **Entidades:** Compañías de energía, comunidades energéticas, proveedores de tecnología de energía renovable.
+
+* **Beneficios:** Eficiencia energética, sostenibilidad ambiental, reducción de la dependencia de fuentes de energía no renovables.
+
+**Tópico 3:** Blockchain y Seguridad de Datos
+
+* **Aspectos importantes:** Este tópico trata sobre el uso de blockchain y la seguridad de datos, destacando su aplicación en contratos inteligentes, IoT y privacidad.
+
+* **Métodos usados:** Sistemas ledger distribuidos, contratos inteligentes, tecnología de blockchain para la seguridad de datos.
+
+* **Métricas:** Integridad de los datos, seguridad y privacidad, eficiencia en transacciones.
+
+* **Entidades:** Empresas de tecnología blockchain, sectores de salud y suministros.
+
+* **Beneficios:** Mayor seguridad y privacidad en la gestión de datos, transparencia en transacciones, eficiencia operativa.
+
+**Tópico 4:** Telemedicina y Salud Digital
+
+* **Aspectos importantes:** Este tópico se centra en la telemedicina y la salud digital, abarcando el uso de tecnologías digitales para mejorar la accesibilidad y eficiencia en la atención médica.
+
+* **Métodos usados:** Implementación de sistemas de telemedicina, uso de tecnología para monitoreo remoto y diagnóstico por imagen.
+
+* **Métricas:** Accesibilidad a servicios de salud, eficiencia en la atención médica, resultados de salud de los pacientes.
+
+* **Entidades:** Proveedores de servicios de salud, empresas de tecnología médica, instituciones médicas.
+
+* **Beneficios:** Mejor accesibilidad a servicios de salud, eficiencia en la atención médica, monitoreo continuo y diagnóstico oportuno.
 
 ### Distribución de Documentos en Tópicos - NMF
 ![image](https://github.com/user-attachments/assets/0c292af9-8278-41ae-a5c5-8a778106a0fb)
 
+**Modelo NMF**
+
+**Tópico 0:** Gobernanza y Desarrollo en Ciudades Inteligentes
+
+* **Aspectos importantes:** Este tópico se centra en la gobernanza y el desarrollo de ciudades inteligentes, con un enfoque en la tecnología de la información y la comunicación (ICT) para mejorar los servicios públicos y la calidad de vida de los ciudadanos.
+
+* **Métodos usados:** Implementación de tecnologías ICT, desarrollo de modelos de gobernanza inteligente, investigación sobre la participación ciudadana.
+
+* **Métricas:** Mejora en los servicios públicos, participación ciudadana, calidad de vida.
+
+* **Entidades:** Gobiernos locales, organizaciones de investigación, empresas de tecnología.
+
+* **Beneficios:** Mejoras en la gobernanza urbana, eficiencia en los servicios públicos, mayor participación y satisfacción ciudadana.
+
+**Tópico 1:** Tecnología Blockchain y Seguridad en IoT
+
+* **Aspectos importantes:** Este tópico aborda la aplicación de la tecnología blockchain para mejorar la seguridad en el Internet de las Cosas (IoT), incluyendo contratos inteligentes y sistemas descentralizados.
+
+* **Métodos usados:** Uso de tecnología blockchain, implementación de contratos inteligentes, desarrollo de aplicaciones descentralizadas.
+
+* **Métricas:** Seguridad de los datos, privacidad, eficiencia de las transacciones.
+
+* **Entidades:** Empresas de tecnología, sectores de salud y logística.
+
+* **Beneficios:** Mayor seguridad y privacidad en sistemas IoT, transparencia en transacciones, reducción de fraudes.
+
+**Tópico 2:** Transición Energética y Sistemas de Energía
+
+* **Aspectos importantes:** Este tópico se centra en la transición hacia energías renovables y la optimización de los sistemas de energía, destacando la importancia de la eficiencia energética y la sostenibilidad.
+
+* **Métodos usados:** Implementación de redes inteligentes, almacenamiento de energía, desarrollo de sistemas de energía renovable.
+
+* **Métricas:** Eficiencia energética, reducción de emisiones de carbono, capacidad de almacenamiento.
+
+* **Entidades:** Compañías de energía, comunidades energéticas, proveedores de tecnología.
+
+* **Beneficios:** Sostenibilidad energética, reducción de la huella de carbono, mayor eficiencia en el consumo energético.
+
+**Tópico 3:** Gestión de Datos y Seguridad Digital
+
+* **Aspectos importantes:** Este tópico se enfoca en la gestión de grandes volúmenes de datos (Big Data) y la seguridad digital, destacando la importancia de la privacidad y la calidad de la información.
+
+* **Métodos usados:** Análisis de Big Data, gestión de la privacidad de datos, implementación de plataformas de computación en la nube.
+
+* **Métricas:** Calidad de los datos, seguridad y privacidad, eficiencia en el análisis de datos.
+
+* **Entidades:** Empresas de tecnología, organizaciones de análisis de datos, proveedores de servicios en la nube.
+
+* **Beneficios:** Mejor gestión de datos, mayor seguridad y privacidad, eficiencia en el procesamiento y análisis de datos.
+
+**Tópico 4:** Inteligencia Artificial y Sostenibilidad Ambiental
+
+* **Aspectos importantes:** Este tópico aborda la aplicación de la inteligencia artificial (IA) en la sostenibilidad ambiental, destacando la investigación y el desarrollo de políticas para enfrentar el cambio climático y mejorar la gestión de recursos.
+
+* **Métodos usados:** Uso de IA para la gestión ambiental, investigación sobre sostenibilidad, desarrollo de políticas climáticas.
+
+* **Métricas:** Impacto ambiental, eficiencia en la gestión de recursos, innovación en sostenibilidad.
+
+* **Entidades:** Instituciones de investigación, organizaciones ambientales, empresas de tecnología.
+
+* **Beneficios:** Mejoras en la sostenibilidad ambiental, innovación en la gestión de recursos, políticas efectivas contra el cambio climático.
 
 ### Agrupación por palabras clave
 ### Nube de Palabras - LDA
 ![image](https://github.com/user-attachments/assets/30921fc2-d9d9-4422-aa71-9e8b14adac7a)
 
+En este gráfico representa las palabras claves tomada de la base de datos trabajada de LDA de Science gorvenance
+
 ### Nube de palabras - NMF 
 ![image](https://github.com/user-attachments/assets/32bee730-6db1-40d5-b3ce-bcb61af35042)
 
-
-
+En este gráfico representa las palabras claves tomada de la base de datos trabajada de NMF de Science gorvenance
 
 
