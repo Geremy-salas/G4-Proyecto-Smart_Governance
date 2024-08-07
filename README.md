@@ -119,8 +119,8 @@ El gráfico muestra la evolución del número de publicaciones en Scopus relacio
 #### Año 2024:
 - **Número de publicaciones:** 396 
 - **Observación:** Hay una disminución drástica en el número de publicaciones, bajando a 396. Esto representa una caída de 308 publicaciones respecto al año 2023. Este descenso abrupto podría deberse a varios factores, como cambios en las prioridades de investigación, saturación del tema, o posibles dificultades en la recopilación de datos recientes.
-- 
-### Conclusión:
+
+#### Conclusión:
 El gráfico muestra un crecimiento sostenido en el número de publicaciones sobre smart governance en Scopus desde 2020 hasta 2023, seguido de una caída significativa en 2024. Esta tendencia puede reflejar cambios en el interés académico, financiamiento de investigaciones, o nuevos desarrollos en el campo. Es importante investigar más a fondo las posibles causas detrás de esta disminución en 2024 para entender mejor el contexto y las dinámicas de la investigación en smart governance.
 
 ### Número de publicaciones en ScienceDirect por año relacionado a Smart governance
@@ -280,9 +280,39 @@ Este gráfico muestra la relación entre el año de publicación y el número de
 - La mayoría de las publicaciones probablemente tienen 0 o 1 cita.
 - Un valor atípico alcanza alrededor de 22 citas.
 
-#### Copnclusión 
+#### Conclusión 
 Este gráfico ilustra claramente cómo el número de citas tiende a aumentar con el tiempo desde la publicación, con una notable variabilidad y algunos trabajos de alto impacto que se destacan como valores atípicos.
 
+### Top 15 Términos Frecuentes
+![image](https://github.com/user-attachments/assets/6aede9df-f4b5-43af-b3df-026d8459984e)
+
+Este gráfico muestra los 15 términos más frecuentes en un conjunto de datos, probablemente relacionados con smart governance y ciudades inteligentes. 
+
+#### Término:
+- "Smart" es el término más utilizado, con una frecuencia cercana a 9000, esto sugiere que el concepto de "inteligencia" es central en los documentos analizados.
+- "Governance" es el segundo término más frecuente, con alrededor de 4800 menciones, esto indica un fuerte enfoque en aspectos de gestión y administración.
+- "Data" es el tercer término más común, seguido de cerca por "technology" y "digital" más abajo en la lista, esto refleja la importancia de los datos y la tecnología en el contexto de smart governance.
+- "City" y "cities" aparecen en cuarta y quinta posición respectivamente.
+- "Urban" también está presente, lo que refuerza el enfoque en entornos urbanos.
+- "Research", "study", y "development" están presentes, indicando un fuerte componente de investigación en el campo.
+- "Management" y "energy" aparecen en la lista, sugiriendo la importancia de la gestión de recursos y la energía en el contexto de ciudades inteligentes.
+- "Paper" podría referirse a documentos de investigación.
+- "Technologies" en plural complementa la presencia de "technology" singular.
+#### Conclusión
+En conclusión, este gráfico proporciona una visión general de los temas clave en el campo de smart governance y ciudades inteligentes, destacando la importancia de la tecnología, los datos, la gestión urbana y la investigación en este ámbito.
+
+### Intertopic distance map
+![image](https://github.com/user-attachments/assets/6a6fa4ef-784c-4b48-82f4-77329403a0bc)
+
+El Tópico 1 representa el enfoque más significativo dentro de la base de datos analizada, abarcando el 38.4% de los tokens, los términos clave como "smart", "city", "governance", "urban", y "data" sugieren un fuerte énfasis en la aplicación de tecnologías inteligentes y el uso de datos para mejorar la gobernanza urbana. Hay un claro enfoque en la investigación y el desarrollo en este campo, con una atención particular a la sostenibilidad y la energía.
+
+![image](https://github.com/user-attachments/assets/32608ff1-5984-4e9e-a11f-ccab46044253)
+
+El Tópico 2 parece enfocarse más en los aspectos tecnológicos y de datos de las ciudades inteligentes que representa el 31.4% de los tokens, con un énfasis particular en blockchain y energía, mientras que el enfoque en gobernanza ha disminuido en comparación con el Tópico 1 anterior, los términos clave como "blockchain", "digital", y "technology" tienen mayor prominencia, en cambio "Energy" y "development" parecen tener más peso en este tópico.
+
+![image](https://github.com/user-attachments/assets/a91a81dc-346c-4a1e-a1ce-43340562a49c)
+
+El Tópico 3 parece enfocarse más en los aspectos de gobernanza y gestión de las ciudades inteligentes, con un equilibrio entre los elementos tecnológicos y los aspectos sociales y urbanos que representa el 30.1% de los tokens, los término claves como "Smart" sigue siendo el término más frecuente, "Governance" ha vuelto a subir a la segunda posición, similar, en cambio "Research", "cities", y "city" completan los cinco términos más relevantes, "Management" aparece como un término importante, ocupando la sexta posición, "Study" y "urban" también tienen una relevancia notable en este tópico.
 
 ## 4. Modelos no supervisados empleados
 
