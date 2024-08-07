@@ -317,5 +317,24 @@ El Tópico 3 parece enfocarse más en los aspectos de gobernanza y gestión de l
 ## 4. Modelos no supervisados empleados
 
 ### Identificación de conceptos clave
+### Top 40 palabras más frecuentes
+![image](https://github.com/user-attachments/assets/6684580e-26d4-4a90-9898-075eee77cf17)
+
+### Distribución de Documentos en Tópicos - LDA
+![image](https://github.com/user-attachments/assets/5b66e379-d27a-4e9a-9873-ea9290406d7f)
+
+### Distribución de Documentos en Tópicos - NMF
+![image](https://github.com/user-attachments/assets/0c292af9-8278-41ae-a5c5-8a778106a0fb)
+
 
 ### Agrupación por palabras clave
+### Nube de Palabras - LDA
+![image](https://github.com/user-attachments/assets/30921fc2-d9d9-4422-aa71-9e8b14adac7a)
+
+### Nube de palabras - NMF 
+![image](https://github.com/user-attachments/assets/32bee730-6db1-40d5-b3ce-bcb61af35042)
+
+
+
+
+
