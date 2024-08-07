@@ -24,6 +24,7 @@ Smart Governance se refiere a la aplicación de tecnologías avanzadas y datos i
   - [Agrupación por palabras clave](#agrupación-por-palabras-clave)
 
 ## 1. Descripción del Dataset
+El proyecto de ciencias de datos sobre *Smart Governance* se centra en analizar artículos científicos relacionados con la gobernanza inteligente utilizando datos provenientes de Scopus y ScienceDirect. Incluye el pre-procesamiento de datos, la realización de visualizaciones exploratorias y la aplicación de modelos no supervisado para clasificar los artículos según conceptos clave y temas relevantes. La evaluación del proyecto se enfoca en medir la calidad del clustering y extraer conocimientos significativos sobre el tema.
 ### Origen de los Datos
 ### 🔗 Links: <https://www.scopus.com/home.uri>
 ![](https://upload.wikimedia.org/wikipedia/commons/2/26/Scopus_logo.svg) 
