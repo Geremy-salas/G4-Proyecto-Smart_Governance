@@ -85,7 +85,7 @@ Smart Governance se refiere a la aplicación de tecnologías avanzadas y datos i
     combined_df.to_csv('/content/science_combined.csv', index=False)
     ```
 ### Unificación de Dataset
-- Se creó un nuevo cuaderno en Google Colab para unificar ambos conjuntos de datos en un único archivo. Para lograrlo, se ejecutó el siguiente código:
+- Se cargan y preparan dos archivos CSV, uno de Scopus y otro de ScienceDirect. Se ajustan las columnas de Scopus para que coincidan con las de ScienceDirect y se crean columnas adicionales para identificar la fuente y combinar palabras clave. Finalmente, se unifican ambos DataFrames en uno solo, asegurando consistencia en las columnas y datos.
 
    ```bash
     import pandas as pd
